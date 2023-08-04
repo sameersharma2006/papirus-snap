@@ -2,7 +2,7 @@ name: icon-theme-papirus
 adopt-info: papirus
 base: bare
 build-base: core22
-summary: Latest Complete Set of Papirus-Icons
+summary: Latest Complete Set of Papirus-Icons For Snaps.
 description: |
   This snap provides the Papirus Icon Theme in a form that can be used
   by other snapped applications. It can be installed alongside the
@@ -25,13 +25,8 @@ slots:
 parts:      
   papirus:
     source: https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git
+    source-tag: '20230801'
     plugin: make
-    build-packages:
-     - curl
-     - build-essential
     override-pull: |
-     craftctl default
-     craftctl set version=$(git describe --tags --abbrev=0) 
-     VER=$(git describe --tags --abbrev=0)
-     curl -LO https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/refs/tags/${VER}.tar.gz
-    
+      craftctl default
+      craftctl set version=$(git describe --tags --abbrev=0)
