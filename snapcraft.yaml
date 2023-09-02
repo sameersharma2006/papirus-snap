@@ -2,11 +2,12 @@ name: icon-theme-papirus
 adopt-info: papirus
 base: bare
 build-base: core22
-summary: Latest Complete Set of Papirus-Icons For Snaps.
+summary: Latest Complete Set of Papirus-Icons
 description: |
-  This snap provides the Papirus Icon Theme in a form that can be used
-  by other snapped applications. It can be installed alongside the
-  gtk-common-themes snap.
+  This snap provides the Papirus Icon Theme in a form that can be used by other snapped applications. 
+  It can be installed alongside the gtk-common-themes snap.
+  
+  This Snap autoconnects with snapd desktop integration, so no need of manual work.
 grade: stable
 compression: lzo
 confinement: strict
@@ -25,7 +26,7 @@ slots:
 parts:      
   papirus:
     source: https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git
-    source-tag: '20230801'
+    source-tag: '20230901'
     plugin: make
     override-pull: |
       craftctl default
