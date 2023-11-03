@@ -4,9 +4,9 @@ base: bare
 build-base: core22
 summary: Latest Complete Set of Papirus-Icons
 description: |
-  This snap provides the Papirus Icon Theme in a form that can be used by other snapped applications. 
+  This snap provides the Papirus Icon Theme in a form that can be used by other snapped applications.
   It can be installed alongside the gtk-common-themes snap.
-  
+
   This Snap autoconnects with snapd desktop integration, so no need of manual work.
 grade: stable
 compression: lzo
@@ -20,14 +20,14 @@ slots:
         - $SNAP/usr/share/icons/Papirus-Dark
         - $SNAP/usr/share/icons/Papirus
         - $SNAP/usr/share/icons/Papirus-Light
-        - $SNAP/usr/share/icons/ePapirus-Dark
-        - $SNAP/usr/share/icons/ePapirus
 
-parts:      
+parts:
   papirus:
     source: https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git
-    source-tag: '20230901'
+    source-tag: '20231101'
     plugin: make
+    make-parameters:
+      - EXCLUDE="ePapirus ePapirus-Dark"
     override-pull: |
       craftctl default
       craftctl set version=$(git describe --tags --abbrev=0)
