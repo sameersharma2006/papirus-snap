@@ -6,8 +6,6 @@ summary: Latest Complete Set of Papirus-Icons
 description: |
   This snap provides the Papirus Icon Theme in a form that can be used by other snapped applications.
   It can be installed alongside the gtk-common-themes snap.
-
-  This Snap autoconnects with snapd desktop integration, so no need of manual work.
 grade: stable
 compression: lzo
 confinement: strict
