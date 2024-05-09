@@ -22,7 +22,7 @@ slots:
 parts:
   papirus:
     source: https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git
-    source-tag: '20240501'
+    source-tag: '20240201'
     source-depth: 1
     plugin: make
     make-parameters:
