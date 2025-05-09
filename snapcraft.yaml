@@ -22,11 +22,9 @@ slots:
 parts:
   papirus:
     source: https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git
-    source-tag: '20250201'
+    source-tag: '20250501'
     source-depth: 1
     plugin: make
-    make-parameters:
-      - EXCLUDE="ePapirus ePapirus-Dark"
     override-pull: |
       craftctl default
       craftctl set version=$(git describe --tags --abbrev=0)
